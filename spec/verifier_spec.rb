@@ -32,7 +32,7 @@ RSpec.describe Verifier do
     end
 
     it 'adds 978 to the begining of a successful ISBN-10 number' do
-        expect(verifier.isbn_10_to_13([3, 5, 9, 8, 2, 1, 5, 0, 8, 8])).to eq([9, 7, 8, 3, 5, 9, 8, 2, 1, 5, 0, 8, 8])
+        expect(verifier.isbn_10_to_13([3, 5, 9, 8, 2, 1, 5, 0, 8, 8])).to eq("9783598215088")
     end
 
     it 'runs process to return a key value that can be used to know the correct end key of an ISBN-10 number short a key, or if an ISBN-10 number is valid.' do
